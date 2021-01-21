@@ -1,0 +1,65 @@
+.modal-backdrop {
+    z-index: 50;
+}
+
+.modal {
+    z-index: 60;
+
+    &.modal-default {
+
+        .modal-header {
+
+            color: $color-dark;
+
+            &.with-border {
+                border-bottom: 1px solid #e5e5e5;
+            }
+        }
+    }
+
+    .modal-footer .btn {
+        min-width: 120px;
+    }
+}
+
+.ui-modal {
+
+    .ui-modal__container {
+        border-radius: 0.2rem;
+        width: 40rem;
+    }
+
+    .ui-modal__header {
+        background-color: #fff;
+    }
+    
+    &.modal-danger {
+        .ui-modal__header {
+            background-color: $brand-danger;
+            .ui-modal__header-text, .ui-close-button {
+                color: #fff;
+            }
+        }
+
+        .ui-modal__footer {
+            .ui-button--color-primary {
+                background-color: $brand-danger;
+            }
+        }
+    }
+
+    .ui-confirm__message {
+        font-size: $font-size-base;
+    }
+
+    .ui-modal__footer {
+        .ui-confirm__footer, > div {
+            flex-direction: row-reverse;
+            display: flex;
+    
+            .ui-button {
+                margin-right: .5rem;
+            }
+        }
+    }
+}

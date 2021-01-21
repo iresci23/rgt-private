@@ -1,0 +1,25 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    border: 0;
+
+    &.w100 {
+        width: 100%;
+    }
+    
+    .flex-grow-1 {
+        flex-grow: 1;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+
+    &.flex-end {
+        justify-content: flex-end;
+    }
+}

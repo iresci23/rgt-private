@@ -1,0 +1,294 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "_variables";
+@import "_form";
+@import "_modal";
+@import "_grid";
+@import "_flex";
+@import "_site";
+
+// Bootstrap
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, html {
+	font-size: $font-size-base;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica,Arial,sans-serif !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	color: $color-dark;
+}
+
+.material-icons {
+	font-family: 'Material Icons Outlined', 'Material Icons' !important;
+}
+
+.side-body {
+
+	.page-buttons {
+		display: inline-block;
+	    font-size: 18px;
+	    height: 100px;
+	    line-height: 43px;
+	    margin-top: 3px;
+	    padding-top: 28px;
+	    color: #555;
+	    position: relative;
+	    font-weight: 700;
+	    margin-right: 20px;
+	    float: right;
+	}
+
+	.mini-form-search {
+
+		#search-input input {
+			width: 94.5%;
+		}
+	}
+
+	.filter-pills {
+
+		li {
+
+			a {
+
+				padding: 5px 8px;
+
+				&:hover {
+					color: inherit;
+					text-decoration: underline;
+					background-color: unset;
+				}
+			}	
+
+			&.active>a, &.active>a:focus, &.active>a:hover {
+				color: inherit;
+				font-weight: bold;
+				text-decoration: underline;
+				background-color: unset;
+			}
+		}
+
+	}
+
+	.more-options-dropdown {
+
+		li > div {
+			    display: block;
+			    padding: 10px 5px;
+			    clear: both;
+			    font-weight: 400;
+			    line-height: 1.42857143;
+
+			> a {
+				color: #777;
+			    white-space: nowrap;
+			    text-align: left;
+			    transition: color .3s ease;
+			    display: block;
+			}
+		}
+	}
+
+	.sub-navbar {  
+		display: flex;
+	    justify-content: center;
+	    flex-wrap: wrap;  
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		> li > a {
+			list-style: none;
+		    border-radius: 25px;
+		    border: 1px solid #f9f9f9;
+		}
+
+		> li.active > a, > li > a:hover  {
+			color: #fff;
+    		background-color: #22A7F0;
+    		
+		}
+	}
+
+	.simple-tab-layout {
+
+		padding-top: 20px;
+
+		.nav-tabs {
+			background-color: unset;
+			border-bottom: 0;
+		}
+		.nav-tabs>li>a{
+			background-color: #eee;
+		}
+		.nav-tabs>li.active>a{
+			background-color: #62a8ea;
+		}
+
+		.tab-content {
+			background-color: #fff;
+			padding-top: 15px;
+		}
+	}
+
+	.auto-save-indicator {
+		padding: 10px;
+		margin: 0;
+		display: flex;
+		align-self: center;
+		position: fixed;
+		background-color: #FAFAFA;
+		z-index: 99;
+		border-radius: 8px;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+		span{
+			margin-right: 5px;
+		}
+		
+		&.success {
+			font-weight: 500;
+			color: $brand-success;
+			background-color: #E8F5E9;
+		}
+
+		&.error {
+			font-weight: 500;
+			color: #212121;
+			background-color: #FFCDD2
+		}
+	}
+
+	.dynamic-form {
+		label.text-label {
+			color: $text-color-dark;
+			font-weight: 500;
+			font-size: 16px;
+			display: block;
+		}
+	}
+
+	.widget {
+		margin-top: 10px;
+		margin-bottom: 20px;
+    	display: block;
+
+		&.target-group-widget .form {
+			background: rgb(239 239 239 / 1);
+		    color: #000;
+		    padding: 15px;
+		    border-radius: 4px;
+
+		    .form-group {
+				margin-bottom: 2px;
+		    }
+		}
+
+		&.monetize-list-widget {
+
+			.checkbox-group {
+
+				.el-checkbox, .el-radio {
+					width: 100%;
+				}
+
+				.el-checkbox+.el-checkbox, .el-radio+.el-radio {
+					margin-left: 0;
+				}
+			}
+
+			.radio-group {
+				margin-left: 30px;
+			}
+
+			.bottom-quick-add-input {
+				margin-top: 10px;
+
+				a.btn {
+					line-height: 1;
+					padding: 10px 15px;
+					height: 40px;
+					margin-left: 10px;
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.media-manager {
+
+		.list-header {
+
+			button {
+				padding: 4px 15px;
+			}
+		}
+
+		.file-upload-container {
+			input[type=file] {
+				display: none;
+			}
+		}
+	}
+
+}
+
+/**
+ *
+ * Bootstrap overrides
+ *
+ */
+
+.btn-xs {
+	padding: 1px 5px;
+}
+.clearfix {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+/**
+ *
+ * Custom utilities
+ *
+ */
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.ml-1 {
+	margin-left: 1rem;
+}
+
+.ml-2 {
+	margin-left: 2rem;
+}
+
+.p0 {
+	padding: 0 !important;
+}
+
+.indented {
+	margin-left: 25px !important;
+}
+
+.bordered {
+	border: 1px solid $list-group-border !important;
+}
